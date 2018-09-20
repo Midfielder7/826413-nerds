@@ -19,40 +19,48 @@
           </ul>
         </nav>
        </header>
-   <main>
+     <main>
+      </body>
        <h2>Магазин готовых шаблонов</h2>
-       
-        <fieldset>
-         <legend>Группы товаров</legend>
-         <ul>
-           <li class="filter-option">
-             По Цене
-           </li>
-           <li class="filter-option">
-             По типу
-           </li>
-           <li class="filter-option">
-             По названию
-           </li>
-         </ul>
+       <form method="get">
+        <fieldset class="filter-item">
+          <legend>Стоимость:</legend>
+            <div class="range-filter">
+             <div class="range-controls">
+              <div class="scale">
+              <div class="bar"></div>
+             </div>
+             <div class="toggle toggle-min"></div>
+             <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+             <label class="min-price">от<input name="min-price" type="text" value="0"></label>
+             <label class="max-price">до<input name="max-price" type="text" value="15000"></label>
+            </div>
+           </div>
         </fieldset>
-        <fieldset>
-         <legend>Сетка</legend>
-          <li class="filter-grid">
-             <input type="radio" id="adaptiv">
-             <label for="adaptiv">Адаптивная</label>
-           </li>
-           <li class="filter-grid">
-            <input type="radio" id="fiks">
-             <label for="fiks">Фиксированная</label>
-           </li>
-           <li class="filter-grid">
-            <input type="radio" id="rubber">
-             <label for="rubber">Резиновая</label>
-           </li>
-         <section class="filter-option">
+        
+         <fieldset>
+          <legend>Сетка</legend>
+            <ul>
+             <li class="filter-grid">
+               <input name="grids" type="radio" id="adaptiv">
+               <label for="adaptiv">Адаптивная</label>
+             </li>
+             <li class="filter-grid">
+               <input name="grids" type="radio" id="fiks">
+               <label for="fiks">Фиксированная</label>
+             </li>
+             <li class="filter-grid">
+               <input name="grids" type="radio" id="rubber">
+               <label for="rubber">Резиновая</label>
+             </li>
+            </ul>
+          </fieldset> 
+
            <fieldset>
              <legend>Особенности</legend>
+             <ul>
                <li class="filter-option">
                  <input type="checkbox" id="filter-slider" checked>
                  <label for="filter-slider">Слайдер</label>
@@ -72,62 +80,91 @@
                <li class="filter-option">
                  <input type="checkbox" id="filter-bag">
                  <label for="filter-bag">Корзина</label>
-               </li> 
+               </li>
+             </ul> 
            </fieldset>
-         </section>
-         <section class="all-product">
-          <div class="cites">
-             <div class="cite">
-               <img src="img/sedona.jpg">
+           <button type="Show">Показать</button>
+      
+        <fieldset>
+           <legend>Сортировать:</legend>
+           <ul>
+             <li class="filter-option">
+               <a href="filter-price">По Цене</a>
+             </li>
+             <li class="filter-option">
+               <a href="filter-type">По типу</a>
+             </li>
+             <li class="filter-option">
+               <a href="filter-name">По названию</a>
+             </li>
+           </ul>
+          </fieldset>
+      </form>
+
+        <div class="catalog">
+           <div class="catalog-item">
+             <img src="img/sedona.jpg">
+             <div class="description">
                <b>Sedona</b>
                <p>Информационный сайт для туристов</p>
                <a type="button"><b>9900 РУБ.<b></a>
              </div>
+           </div>
             
-             <div class="cite">
-               <img src="img/pink.png">
+           <div class="catalog-item">
+             <img src="img/pink.png">
+             <div class="description">
                <b>Pink</b>
                <p>Информационный сайт для туристов</p>
                <a type="button"><b>9900 РУБ.<b></a>
              </div>
+           </div>
 
-             <div class="cite">
-               <img src="img/barbershop.png">
+
+           <div class="catalog-item">
+             <img src="img/barbershop.png">
+             <div class="description">
                <b>Barbershop</b>
                <p>Информационный сайт для туристов</p>
                <a type="button"><b>9900 РУБ.<b></a>
              </div>
-
-               <div class="cite">
-               <img src="img/mishka.png">
+           </div>
+ 
+           <div class="catalog-item">
+             <img src="img/mishka.png">
+             <div class="description">
                <b>Mishka</b>
                <p>Информационный сайт для туристов</p>
                <a type="button"><b>9900 РУБ.<b></a>
              </div>
+           </div>
 
-             <div class="cite">
-               <img src="img/aplus.png">
+           <div class="catalog-item">
+             <img src="img/aplus.png">
+             <div class="description">
                <b>Aplus</b>
                <p>Информационный сайт для туристов</p>
                <a type="button"><b>9900 РУБ.<b></a>
              </div>
+           </div>
 
-             <div class="cite">
-               <img src="img/kvast.png">
+           <div class="catalog-item">
+             <img src="img/kvast.png">
+             <div class="description">
                <b>Kvast</b>
                <p>Информационный сайт для туристов</p>
                <a type="button"><b>9900 РУБ.<b></a>
              </div>
            </div>
-         </section>
-         <div class="pages">
-           <ul class="pagination-list">
-            <li class="pagination-item pagination-item-current"><a>1</a></li>
-            <li class="pagination-item ><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item"><a href="#">Следующая</a></li>
-           </ul>
          </div>
+
+         <ul class="pagination-list">
+           <li class="pagination-item pagination-item-current"><a>1</a></li>
+           <li class="pagination-item"><a href="#">2</a></li>
+           <li class="pagination-item"><a href="#">3</a></li>
+           <li class="pagination-item"><a href="#">Следующая</a></li>
+         </ul>
+        
         <div class="contacts">
            <b>NERDS DESIGN STUDIO</b>
            <p>191186, Санкт-Петербург, ул. Б. Коюшенная, д. 19/8</p>
